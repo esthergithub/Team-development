@@ -1,0 +1,2 @@
+class TeamOwnerMailer < ApplicationMailer
+end

@@ -1,6 +1,5 @@
 class TeamMailer < ApplicationMailer
-  def mail_after_destroy(user)
-    @user = user
-    mail to: user.email, subject: 'agenda deleted'
-  end
+  def mail_new_owner(owner)
+        mail(to: owner.email, subject: `you have been made the team owner`)
+    end
 end

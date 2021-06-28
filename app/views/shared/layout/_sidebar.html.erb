@@ -37,7 +37,7 @@
                 <i class="right fa fa-angle-left"></i>
               </p>
             </a>
-            <%= link_to I18n.t('views.button.delete'), agenda, method: :delete, data: { confirm: 'Are you sure?' }%>
+            <%= link_to I18n.t('views.button.delete'), agenda, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sn float-right'%>
             <ul class="nav nav-treeview" style="display: block;">
               <% agenda.articles.each do |article| %>
                 <li class="nav-item">
@@ -47,9 +47,6 @@
                 </li>
               <% end %>
               <li class="nav-item">
-                <%= link_to new_agenda_article_path(agenda), class: 'nav-link' do %>
-                  <p>+ <%= I18n.t('views.messages.create_article') %></p>
-                <% end %>
               </li>
             </ul>
           </li>
